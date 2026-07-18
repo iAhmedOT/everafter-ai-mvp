@@ -47,8 +47,9 @@ export function StoryToolSection({
           <h2>Try the EverAfter reflection flow.</h2>
           <p className="lead">
             Write a private story, reveal the pattern, share one reflection, then enter an
-            AI-moderated online room. The current version does not permanently save private stories
-            or chat content.
+            AI-moderated online room. This MVP does not permanently store private stories or room
+            chats, and when a real AI provider is enabled the submitted content may be processed for
+            the current session.
           </p>
         </div>
 
@@ -121,7 +122,8 @@ export function StoryToolSection({
               <p>
                 Vercel Analytics tracks page views and custom flow events. This prototype does not
                 yet save private stories to a database. Your shared room reflection is used in the
-                current session to open the room and talk with the AI moderator.
+                current session to open the room and talk with the AI moderator, while the full
+                story stays out of the room itself.
               </p>
             </div>
           </div>
@@ -140,8 +142,8 @@ export function StoryToolSection({
                 checked={consentSharedReflection}
                 onChange={(event) => onConsentChange(event.target.checked)}
               />
-              I understand my private story stays private; this reflection will be shared into the
-              room experience.
+              I understand my full story stays out of the room. Only this reflection is shared into
+              the room experience for the current session.
             </label>
             <input
               placeholder="Add a reflection to enter the online room…"

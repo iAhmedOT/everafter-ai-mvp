@@ -25,7 +25,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState<RoomSubject>("Family wounds");
   const [enteredRoom, setEnteredRoom] = useState(false);
-  const [consentSharedReflection, setConsentSharedReflection] = useState(true);
+  const [consentSharedReflection, setConsentSharedReflection] = useState(false);
   const [roomMessages, setRoomMessages] = useState<ChatMessage[]>([]);
   const [roomInput, setRoomInput] = useState("");
   const [moderating, setModerating] = useState(false);

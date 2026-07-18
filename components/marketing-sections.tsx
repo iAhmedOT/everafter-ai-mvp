@@ -177,7 +177,11 @@ export function DataSection() {
         </div>
         <div className="card">
           <h3>Privacy</h3>
-          <p>Private stories are analyzed in-session and are not shown inside rooms.</p>
+          <p>
+            Private stories are analyzed in-session, are not shown inside rooms, and are not stored
+            by this MVP. When a real AI provider is configured, story content may be processed by
+            that configured AI provider for the current session.
+          </p>
         </div>
         <div className="card">
           <h3>Next layer</h3>
