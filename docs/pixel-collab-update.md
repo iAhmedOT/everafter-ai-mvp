@@ -23,6 +23,15 @@ Pixel performed a maintainability refactor without changing the intended MVP flo
 - `docs/pixel-ownership-brief.md`
 - `docs/pixel-collab-update.md`
 
+### Test + trust changes added after the refactor
+- added Vitest with `npm test`
+- added coverage in:
+  - `tests/analysis.test.ts`
+  - `tests/moderation.test.ts`
+  - `tests/copy.test.tsx`
+- tightened privacy wording so the UI now says the MVP does **not** store private stories, keeps full stories out of rooms, and may process content through a configured AI provider during the current session
+- changed room-entry consent to require an explicit user opt-in instead of defaulting the checkbox to checked
+
 ## Intent of the refactor
 
 The goal was **not** to redesign the product. The goal was to make it easier for multiple contributors to work safely in parallel.
@@ -46,10 +55,20 @@ In practice, that means:
 Pixel ran:
 
 ```bash
+npm test
 npm run build
 ```
 
-and confirmed the app still builds successfully after the refactor.
+and confirmed the app still builds successfully after the refactor and trust-copy changes.
+
+## Branch + PR for review
+
+- local branch: `pixel/everafter-refactor-safety`
+- pushed branch: `fork/pixel/everafter-refactor-safety`
+- fork URL: `https://github.com/iAhmedOT/everafter-ai-mvp`
+- upstream PR: `https://github.com/Blendbound/everafter-ai-mvp/pull/1`
+
+Note: direct push to upstream `Blendbound/everafter-ai-mvp` was not permitted for Ahmed's GitHub account, so Pixel forked the repo under `iAhmedOT`, pushed the branch there, and opened a PR back to upstream for review.
 
 ## Suggested collaborator etiquette
 
